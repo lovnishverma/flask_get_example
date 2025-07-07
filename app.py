@@ -9,9 +9,9 @@ def index():
 
 @app.route('/sum', methods=['GET', 'POST'])
 def sum():
-    # num1 = int(request.form.get('a'))
-    num1 = int(request.args.get('a'))
-    num2 = int(request.args.get('b'))
+    # num1 = int(request.args.get('a'))
+    num1 = int(request.form.get('a'))
+    num2 = int(request.form.get('b'))
     result = num1 + num2
     return render_template('index.html', result=result)
 
