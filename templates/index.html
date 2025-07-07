@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Flask App</title>
+<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='img/erma.png') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+    <body>
+        <h1>Welcome to the Flask App</h1>
+ <img src="{{ url_for('static', filename='img/test.png') }}" width="220" hieght="100">
+<form action="/sum" method="get">
+<label> enter first number:</label><br>
+<input type="text" placeholder="enter 1st no." name="a" required><br>
+<label> enter second number:</label><br>
+<input type="text" placeholder="enter 2nd no." name="b" required><br>
+
+<input type="submit" value="Sum"> <br>
+<a href="/"> refresh </a> <br>
+
+
+{% if result %}
+<b>sum is : {{result}}</b>
+{%endif%}
+
+</form>
+
+
+
+    </html>
